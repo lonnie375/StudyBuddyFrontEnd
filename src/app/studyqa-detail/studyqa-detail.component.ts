@@ -1,5 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Studyqa } from '../studyqa';
+import { faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-studyqa-detail',
@@ -7,6 +8,8 @@ import { Studyqa } from '../studyqa';
   styleUrls: ['./studyqa-detail.component.css']
 })
 export class StudyqaDetailComponent implements OnInit {
+
+faCoffee = faHeart;
 
   @Input() Question:Studyqa = {
     id:0,
@@ -18,5 +21,5 @@ export class StudyqaDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

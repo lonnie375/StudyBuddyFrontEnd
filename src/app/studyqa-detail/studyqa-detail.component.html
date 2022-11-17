@@ -1,8 +1,12 @@
-<div>
-  <label class="swap">
+<div class="border-2 rounded-md border-accent">
+  <label class="swap p-4 flex">
     <input type="checkbox" />
     <div class="swap-off">Q - {{ Question.question }}</div>
     <div class="swap-on">A - {{ Question.answer }}</div>
+    <a href="#"class="">
+      <div class="items-end">
+        <fa-icon [icon]="faCoffee"></fa-icon>
+      </div>
+    </a>
   </label>
-  <button></button>
 </div>
