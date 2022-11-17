@@ -1,0 +1,18 @@
+<div *ngFor="let q of TheList" class="text-left ml-12">
+<app-studyqa-detail [Question]="q"></app-studyqa-detail>
+</div>
+<div>
+<button (click)="openForm()" 
+class="btn-accent btn">Toggle New Question</button>
+{{UserID}}
+</div>
+<div *ngIf="addingNewQA">
+<div class="text-center">
+    <input type="text" [(ngModel)]="newQuestion" 
+    class="input input-sm m-4 input-secondary" placeholder="Question">
+    <input type="text" [(ngModel)]="newAnswer" 
+    class="input input-sm m-4 input-secondary" placeholder="Answer">
+    <button (click)="addQuestion()" class="btn m-4 btn-sm">Save</button>
+    <button class="btn m-4 btn-sm" (click)="cancelCreate()">Cancel</button>
+</div>
+</div>
