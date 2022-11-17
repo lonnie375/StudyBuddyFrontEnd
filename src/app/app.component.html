@@ -1,7 +1,6 @@
 <h1 class="text-6xl text-center text-primary">Study Buddy DevBuild</h1>
 
 <div *ngIf="isUserLogged === false" class="text-center mt-[40%]">
-  <div style="border: 1px solid black;">{{userIDFilled}}</div>
   <input type="text" [(ngModel)]="userIDFilled" required class="m-4">
   <input type="password">
   <button class="btn btn-sm m-4" (click)="setUserID()">Log In</button>
