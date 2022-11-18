@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let q of TheList" class="text-left ml-12">
+    <app-favoriteqa-detail
+      [FavQ]="q"
+      (delete)="deleteFav($event)"
+    ></app-favoriteqa-detail>
+  </div>
+  <button routerLink="/" class="btn btn-sm btn-accent">Leave Fav's</button>
+</div>

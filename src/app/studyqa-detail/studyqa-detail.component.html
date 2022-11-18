@@ -3,7 +3,7 @@
     <input type="checkbox" />
     <div class="swap-off">Q - {{ Question.question }}</div>
     <div class="swap-on">A - {{ Question.answer }}</div>
-    <a href="#"class="">
+    <a class="" (click)="saveToFav()">
       <div class="items-end p-1">
         <fa-icon [icon]="faCoffee"></fa-icon>
       </div>

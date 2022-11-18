@@ -1,6 +1,9 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Studyqa } from '../studyqa';
 import { faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { CookieService } from 'ngx-cookie-service';
+import { FavoriteqaService } from '../favoriteqa.service';
+import { Favoriteqa } from '../favoriteqa';
 
 @Component({
   selector: 'app-studyqa-detail',
@@ -17,9 +20,22 @@ faCoffee = faHeart;
     answer:''
   }
 
-  constructor() {}
+  constructor(private cookie:CookieService, private FavSrv:FavoriteqaService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+
+  saveToFav(){
+    let newQ:Favoriteqa ={
+      id:0,
+      question: this.Question.question,
+      answer:this.Question.answer,
+      userid:this.cookie.get('userID')
+    }
+    
+    this.FavSrv.Create((result:any)=>{
+      console.log('Set as fav')
+    },newQ)
   }
   
 }

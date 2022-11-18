@@ -1,0 +1,13 @@
+<div class="border-2 rounded-md border-accent">
+    <label class="swap p-4 flex">
+      <input type="checkbox" />
+      <div class="swap-off">Q - {{ FavQ.question }}</div>
+      <div class="swap-on">A - {{ FavQ.answer }}</div>
+      <a (click)="removeFromFav()">
+        <div class="items-end p-1">
+          <fa-icon [icon]="faCoffee" style="color: red;"></fa-icon>
+        </div>
+      </a>
+    </label>
+  </div>
+  

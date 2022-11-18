@@ -6,13 +6,13 @@
   <button class="btn btn-sm m-4" (click)="setUserID()">Log In</button>
 </div>
 <div *ngIf="isUserLogged" class="text-center m-2">
-Hello {{userIDFilled}}!
+Hello {{userIDFilled}}! <button class="btn btn-sm btn-secondary mt-2" routerLink="/favorite">Favorites</button>
 </div>
 <div *ngIf="isUserLogged" class="text-center">
 <button class="btn btn-sm btn-accent " 
 (click)="userLogOut()">Log Out</button>
 </div>
 <div class="text-center" *ngIf="isUserLogged">
-<app-studyqa-list></app-studyqa-list>
+  <router-outlet></router-outlet>
 </div>
 
