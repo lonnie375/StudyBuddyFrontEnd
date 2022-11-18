@@ -15,6 +15,7 @@ userID:string = '';
    }
 
   checkUserLogged():boolean{
+    this.userID = this.cookie.get('userID');
     if(this.userID === ''){
       return false;
     }

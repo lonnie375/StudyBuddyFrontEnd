@@ -18,7 +18,7 @@ export class AppComponent {
    this.userIDFilled = UserSrv.getUserID();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.checkuserID();
     this.userIDFilled = this.UserSrv.getUserID();
   }
@@ -35,7 +35,8 @@ export class AppComponent {
 
   userLogOut(){
     this.cookie.set('userID','');
-    this.ngOnInit();
+    this.isUserLogged = this.UserSrv.checkUserLogged();
+    this.userIDFilled = '';
   }
 
 }
