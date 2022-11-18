@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { UserIDService } from './user-id.service';
 
 @Component({
@@ -10,14 +11,16 @@ export class AppComponent {
   title = 'DevBuildBootCampFrontEnd';
  
   isUserLogged:boolean = false;
-  userIDFilled:string ='Not Set';
+  userIDFilled:string ='';
 
-  constructor(private UserSrv:UserIDService){
+  constructor(private UserSrv:UserIDService,private cookie:CookieService){
    this.checkuserID();
+   this.userIDFilled = UserSrv.getUserID();
   }
 
   ngOnInit(): void {
     this.checkuserID();
+    this.userIDFilled = this.UserSrv.getUserID();
   }
 
   checkuserID(){
@@ -26,7 +29,13 @@ export class AppComponent {
 
   setUserID(){
     this.UserSrv.setUserID(this.userIDFilled);
+    this.cookie.set('userID',`${this.userIDFilled}`)
     this.isUserLogged = true;
+  }
+
+  userLogOut(){
+    this.cookie.set('userID','');
+    this.ngOnInit();
   }
 
 }

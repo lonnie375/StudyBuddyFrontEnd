@@ -16,9 +16,11 @@ addingNewQA:boolean = false;
 newQuestion:string = '';
 newAnswer:string='';
 
-UserID = '';
+UserID ='';
 
-  constructor(private QSrv:StudyqaService, private UserSrv:UserIDService) { }
+  constructor(private QSrv:StudyqaService, private UserSrv:UserIDService) {
+    this.UserID = this.UserSrv.getUserID();
+   }
 
   ngOnInit(): void {
     this.refresh()
