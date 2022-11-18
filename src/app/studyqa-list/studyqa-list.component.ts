@@ -34,7 +34,8 @@ UserID ='';
   };
 
   openForm(){
-    this.addingNewQA = !this.addingNewQA
+    this.addingNewQA = !this.addingNewQA;
+    this.scrollToBottom();
   }
 
   addQuestion(){
@@ -57,5 +58,15 @@ UserID ='';
     this.newAnswer='';
     this.addingNewQA = false;
   }
+
+  goToBottom(){
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+
+  scrollToBottom() {
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 40);
+}
 
 }
