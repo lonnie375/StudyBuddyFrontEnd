@@ -1,3 +1,5 @@
+# When running for the first time be sure to use npm install --legacy-peer-deps (only way we could get the cookies working)
+
 # DevBuildBootCampFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
