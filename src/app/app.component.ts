@@ -39,4 +39,8 @@ export class AppComponent {
     this.userIDFilled = '';
   }
 
+  goToBottom(){
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+
 }
