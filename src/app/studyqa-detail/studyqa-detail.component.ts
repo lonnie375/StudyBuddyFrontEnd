@@ -14,6 +14,8 @@ export class StudyqaDetailComponent implements OnInit {
 
 faCoffee = faHeart;
 
+toggle = ""
+
   @Input() Question:Studyqa = {
     id:0,
     question:'',
@@ -34,7 +36,8 @@ faCoffee = faHeart;
     }
     
     this.FavSrv.Create((result:any)=>{
-      console.log('Set as fav')
+      console.log('Set as fav');
+      this.toggle= "red"
     },newQ)
   }
   
