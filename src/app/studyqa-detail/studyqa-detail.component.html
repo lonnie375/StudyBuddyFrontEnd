@@ -1,10 +1,10 @@
-<div class="border-2 rounded-md border-accent container ">
-	<label class="swap p-4 flex">
+<div class="border-2 rounded-md border-accent container justify-between">
+	<label class="swap p-4 justify-between flex w-full">
 		<input type="checkbox" />
-		<div class="swap-off ">Q - {{ Question.question }}</div>
+		<div class="swap-off order-first">Q - {{ Question.question }}</div>
 		<div class="swap-on ">A - {{ Question.answer }}</div>
 		<a class="" (click)="saveToFav()">
-			<div class="items-end p-1">
+			<div class="items-end p-1 order-last">
 				<fa-icon [icon]="faCoffee"></fa-icon>
 			</div>
 		</a>
