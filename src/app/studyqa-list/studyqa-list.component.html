@@ -1,7 +1,27 @@
+<!-- The button to open modal -->
+<div class="text-left ml-12 mb-4">
+<label for="my-modal-4" class="btn text-left">Add New Question</label>
+</div>
+<!-- Modal Contents -->
+<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+<label for="my-modal-4" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <div class="text-center">
+            Enter Your New Question <br/>
+            <input type="text" [(ngModel)]="newQuestion" class="input input-sm m-4 input-secondary" placeholder="Question">
+            <input type="text" [(ngModel)]="newAnswer" class="input input-sm m-4 input-secondary" placeholder="Answer">
+            <div class="modal-action">
+                <label for="my-modal-4" class="btn btn-sm">Cancel</label>
+                <label for="my-modal-4" (click)="addQuestion()" class="btn btn-sm">Save</label>
+            </div>
+    </div>
+</label>
+</label>
+
 <div *ngFor="let q of TheList" class="text-left ml-12 mr-12 mb-4 ">
     <app-studyqa-detail [Question]="q"></app-studyqa-detail>
 </div>
-<div *ngIf="!addingNewQA">
+<!-- <div *ngIf="!addingNewQA">
     <button (click)="openForm()" class="btn-accent btn mb-6">Add New Question</button>
 </div>
 <div *ngIf="addingNewQA" class="text-center">
@@ -11,5 +31,5 @@
         <input type="text" [(ngModel)]="newQuestion" class="input input-sm m-4 input-secondary" placeholder="Question">
         <input type="text" [(ngModel)]="newAnswer" class="input input-sm m-4 input-secondary" placeholder="Answer">
         <button (click)="addQuestion()" class="btn m-4 btn-sm">Save</button>
-        <button class="btn m-4 btn-sm" (click)="cancelCreate()">Cancel</button>
-</div>
+        <button class="btn m-4 btn-sm modal-toggle" (click)="cancelCreate()">Cancel</button>
+</div> -->
