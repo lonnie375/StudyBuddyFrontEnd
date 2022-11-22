@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { APIResponse } from './apiresponse';
 import { Favoriteqa } from './favoriteqa';
 
@@ -8,7 +9,7 @@ import { Favoriteqa } from './favoriteqa';
 })
 export class FavoriteqaService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookie:CookieService) { }
 
   API_URL: string = 'https://localhost:7279/favorite/';
 
