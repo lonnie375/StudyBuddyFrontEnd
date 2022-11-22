@@ -33,4 +33,6 @@ export class FavoriteqaService {
   Create(cb: any, q: Favoriteqa) {
     this.http.post<Favoriteqa>(`${this.API_URL}`, q).subscribe(cb);
   }
+
+  
 }

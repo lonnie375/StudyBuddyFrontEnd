@@ -35,7 +35,7 @@ toggle = ""
       userid:this.cookie.get('userID')
     }
     
-    this.FavSrv.Create((result:any)=>{
+    this.FavSrv.Create(()=>{
       console.log('Set as fav');
       this.toggle= "red"
     },newQ)
